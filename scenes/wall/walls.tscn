@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://lcmx7jp2uu4v"]
+
+[ext_resource type="Script" path="res://scenes/wall/walls.gd" id="1_ftrvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68thv"]
+size = Vector2(20, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrdq"]
+size = Vector2(20, 655)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xscoh"]
+size = Vector2(1172, 20)
+
+[node name="Walls" type="StaticBody2D"]
+script = ExtResource("1_ftrvr")
+
+[node name="LeftWall" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 324)
+shape = SubResource("RectangleShape2D_68thv")
+
+[node name="RightWall" type="CollisionShape2D" parent="."]
+position = Vector2(1161, 324)
+shape = SubResource("RectangleShape2D_onrdq")
+
+[node name="TopWall" type="CollisionShape2D" parent="."]
+position = Vector2(576, -9)
+shape = SubResource("RectangleShape2D_xscoh")
