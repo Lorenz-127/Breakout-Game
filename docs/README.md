@@ -1,17 +1,20 @@
 # Brick Breaker: Neon Blast
 
 ## Project Overview
-Brick Breaker: Neon Blast is a modern reimagining of the classic Brick Breaker game, developed by Laurel Games. \
-This project aims to deliver a visually stunning and engaging gaming experience with neon-themed graphics, dynamic gameplay mechanics, and a robust progression system.
+Brick Breaker: Neon Blast is a modern take on the classic Brick Breaker game, featuring neon-themed graphics, dynamic gameplay mechanics, and a progression system. Built with Godot 4.3.
 
-## Key Features
-- Vibrant neon-themed graphics with dynamic lighting effects
-- Progressive difficulty across multiple levels
-- Diverse brick types with unique properties
-- Power-up system enhancing gameplay dynamics
-- Precise paddle control and realistic ball physics
-- Comprehensive scoring system with local high scores
-- Immersive sound design with electronic/synthwave background music
+## Features
+- Neon-themed graphics with dynamic lighting effects
+- Multiple levels with increasing difficulty
+- Power-up system for enhanced gameplay
+- Procedurally generated levels for endless replayability
+- Local high score system
+
+## How to Play
+- Move the paddle left and right to bounce the ball
+- Break all the bricks to complete a level
+- Collect power-ups to gain advantages
+- Don't let the ball fall below the paddle!
 
 ## Technical Specifications
 - Game Engine: Godot 4.3
@@ -25,18 +28,9 @@ This project aims to deliver a visually stunning and engaging gaming experience 
 - [QA Lead Name] - Quality Assurance & Testing
 
 ## Project Status
-Current Version: v0.0.1 - Alpha
+Current Version: MVP - Alpha
 Project Phase: Early-Alpha Development
 
-## Upcoming Milestones
-1. Beta Release: [Projected Date]
-2. Performance Optimization: [Projected Date]
-3. Final QA and Polish: [Projected Date]
-4. Release Candidate: [Projected Date]
-5. Official Launch: [Projected Date]
-
-## Confidentiality
-This project is proprietary and confidential. All team members are required to adhere to the Non-Disclosure Agreement (NDA) signed at the project onset.
 
 ## Contact Information
 For any queries regarding this project, please contact:
