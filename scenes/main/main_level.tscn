@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2y2wdm1wgdgf"]
+[gd_scene load_steps=7 format=3 uid="uid://d2y2wdm1wgdgf"]
 
 [ext_resource type="Script" path="res://scenes/main/main_level.gd" id="1_8bgbr"]
-[ext_resource type="PackedScene" uid="uid://basws8gr5sclp" path="res://scenes/ball/ball.tscn" id="1_kgock"]
+[ext_resource type="PackedScene" uid="uid://basws8gr5sclp" path="res://scenes/balls/ball.tscn" id="1_kgock"]
 [ext_resource type="PackedScene" uid="uid://doem55u4qyf4r" path="res://scenes/paddle/paddle.tscn" id="2_2w755"]
-[ext_resource type="PackedScene" uid="uid://lcmx7jp2uu4v" path="res://scenes/wall/walls.tscn" id="3_7iq46"]
+[ext_resource type="PackedScene" uid="uid://lcmx7jp2uu4v" path="res://scenes/walls/walls.tscn" id="3_7iq46"]
+[ext_resource type="Texture2D" uid="uid://g8ius0gbbl4g" path="res://assets/54510-1920_1080.jpg" id="6_ak6li"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_by3np"]
+size = Vector2(1166, 20)
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8bgbr")
@@ -12,8 +16,22 @@ script = ExtResource("1_8bgbr")
 position = Vector2(575, 325)
 
 [node name="Ball" parent="." instance=ExtResource("1_kgock")]
-position = Vector2(619, 433)
 
 [node name="Paddle" parent="." instance=ExtResource("2_2w755")]
 
 [node name="Walls" parent="." instance=ExtResource("3_7iq46")]
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="BottomWall" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(576, 657)
+shape = SubResource("RectangleShape2D_by3np")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25098)
+z_index = -2
+position = Vector2(577.5, 323)
+scale = Vector2(0.619271, 0.635185)
+texture = ExtResource("6_ak6li")
+
+[connection signal="body_entered" from="DeathZone" to="Ball" method="_on_death_zone_body_entered"]

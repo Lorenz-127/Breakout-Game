@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ypdkweayuhv"]
+
+[ext_resource type="Script" path="res://globals/game_menu.gd" id="1_mjuyw"]
+
+[sub_resource type="SystemFont" id="SystemFont_neon"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[node name="GameMenu" type="Node"]
+script = ExtResource("1_mjuyw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LivesLabel" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 597.0
+offset_right = 92.0
+offset_bottom = 628.0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.25, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_neon")
+theme_override_font_sizes/font_size = 24
+text = "Lives: 3"
+
+[node name="Spacer" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 96.0
+offset_top = 20.0
+offset_right = 534.0
+offset_bottom = 628.0
+size_flags_horizontal = 3
+
+[node name="LevelsLabel" type="Label" parent="CanvasLayer"]
+offset_left = 538.0
+offset_top = 597.0
+offset_right = 607.0
+offset_bottom = 628.0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.25, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_neon")
+theme_override_font_sizes/font_size = 24
+text = "Level: 1"
+
+[node name="Spacer2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 611.0
+offset_top = 20.0
+offset_right = 1049.0
+offset_bottom = 628.0
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 1005.0
+offset_top = 597.0
+offset_right = 1125.0
+offset_bottom = 628.0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.25, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_neon")
+theme_override_font_sizes/font_size = 24
+text = "Score: 0000"
