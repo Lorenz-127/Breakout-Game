@@ -7,8 +7,8 @@ extends Node2D
 @onready var game_over_scene = preload("res://scenes/menus/game_over.tscn")
 
 
-var columns = 32 # Number of columns of blocks
-var rows = 7 # Number of rows of blocks
+@export var columns = 32 # Number of columns of blocks
+@export var rows = 7 # Number of rows of blocks
 var margin = 50 # Distance from edge of screen
 
 # Called when the node enters the scene tree for the first time.

@@ -24,6 +24,10 @@ ControlerSupport="*res://globals/controler_support.gd"
 
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+Brick=""
+
 [input]
 
 ui_accept={

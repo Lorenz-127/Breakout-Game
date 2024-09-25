@@ -4,13 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://basws8gr5sclp" path="res://scenes/balls/ball.tscn" id="1_kgock"]
 [ext_resource type="PackedScene" uid="uid://doem55u4qyf4r" path="res://scenes/paddle/paddle.tscn" id="2_2w755"]
 [ext_resource type="PackedScene" uid="uid://lcmx7jp2uu4v" path="res://scenes/walls/walls.tscn" id="3_7iq46"]
-[ext_resource type="Texture2D" uid="uid://g8ius0gbbl4g" path="res://assets/54510-1920_1080.jpg" id="6_ak6li"]
+[ext_resource type="Texture2D" uid="uid://bksr5vegtg0bo" path="res://assets/54510-1920_1080.jpg" id="6_ak6li"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_by3np"]
 size = Vector2(1166, 20)
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8bgbr")
+columns = 5
+rows = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)

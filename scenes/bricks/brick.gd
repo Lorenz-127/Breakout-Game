@@ -19,12 +19,22 @@ func hit():
 	else:
 		show_damage()
 
+	
 func destroy():
 	$BrickSprite2D.visible = false
 	$BrickCollisionShape2D.disabled = true
 	
-	await get_tree().create_timer(1).timeout
-	queue_free()
+	#count bricks left
+	var bricksLeft = get_tree ().get_nodes_in_group ("Brick")
+	if(bricksLeft.size() == 1):
+		#if last brick, reload scene to next level
+		get_parent().get_node("Ball").is_active = false
+		await get_tree().create_timer(1).timeout #pause
+		GameMenu.level += 1 #iterate level
+		get_tree().reload_current_scene() #reload scene
+	else:
+		await get_tree().create_timer(1).timeout #pause
+		queue_free() #remove brick from scene
 
 func show_damage():
 	# Change the appearance of the brick to show it's been damaged
